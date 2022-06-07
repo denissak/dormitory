@@ -1,0 +1,18 @@
+db:
+  username: postgres
+  password: postgres
+  driver: PostgresDriver
+  url: dormitory:5433
+  hosts: localhost,127.0.0.1
+  pool:
+    size: 12
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/dormitory
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show_sql: true
+    format_sql: true
