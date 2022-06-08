@@ -1,0 +1,28 @@
+package by.sak.dormitory.dto;
+
+import by.sak.dormitory.entity.Sex;
+import by.sak.dormitory.entity.StatusCitizen;
+import lombok.Value;
+
+import java.time.LocalDate;
+
+@Value
+public class PersonalInfoCreateUpdateDto {
+    String firstName;
+    String lastName;
+    String patronymic;
+    String phoneNumber;
+    String image;
+    Sex sex;
+    LocalDate birthdate;
+    String passportNumber;
+    String idPassportNumber;
+    String passportIssuedBy;
+    String registration;
+    StatusCitizen status;
+    String partner;
+    String children;
+    String pets;
+    Integer bike;
+    Integer stroller;
+}

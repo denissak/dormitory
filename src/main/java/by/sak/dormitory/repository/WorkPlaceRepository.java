@@ -1,7 +1,9 @@
 package by.sak.dormitory.repository;
 
 import by.sak.dormitory.entity.WorkPlace;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface WorkPlaceRepository extends Repository<WorkPlace, Integer> {
+@Repository
+public interface WorkPlaceRepository extends JpaRepository<WorkPlace, Integer> {
 }
