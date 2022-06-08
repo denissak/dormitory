@@ -8,8 +8,8 @@ import java.util.List;
 
 @Entity
 @Data
-@ToString(exclude = "users")
-@EqualsAndHashCode(exclude = "users")
+@ToString(exclude = {"users", "dormitory"})
+@EqualsAndHashCode(exclude = {"users", "dormitory"})
 @Table(name = "room")
 @NoArgsConstructor
 @AllArgsConstructor

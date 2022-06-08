@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Value
-@ToString(exclude = "roomReadDtoList")
+//@ToString(exclude = "roomReadDtoList")
 public class DormitoryReadDto {
      Integer id;
      String name;
@@ -16,5 +16,5 @@ public class DormitoryReadDto {
      Double squareLive;
      LocalDate startYear;
      Integer amountRooms;
-     List<RoomReadDto> roomReadDtoList = new ArrayList<>();
+//     List<RoomReadDto> roomReadDtoList = new ArrayList<>();
 }

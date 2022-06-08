@@ -9,8 +9,8 @@ import java.util.List;
 
 @Entity
 @Data
-@ToString(exclude = "rooms")
-@EqualsAndHashCode(exclude = "rooms")
+//@ToString(exclude = "rooms")
+//@EqualsAndHashCode(exclude = "rooms")
 @Table(name = "dormitory")
 @NoArgsConstructor
 @AllArgsConstructor
@@ -26,6 +26,6 @@ public class Dormitory implements BaseEntity<Integer>{
     private Double squareLive;
     private LocalDate startYear;
     private Integer amountRooms;
-    @OneToMany(mappedBy = "dormitory", fetch = FetchType.LAZY)
-    private List<Room> rooms = new ArrayList<>();
+//    @OneToMany(mappedBy = "dormitory", fetch = FetchType.LAZY)
+//    private List<Room> rooms = new ArrayList<>();
 }

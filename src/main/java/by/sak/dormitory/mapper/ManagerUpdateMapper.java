@@ -2,7 +2,6 @@ package by.sak.dormitory.mapper;
 
 import by.sak.dormitory.dto.ManagerCreateUpdateDto;
 import by.sak.dormitory.entity.Manager;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
