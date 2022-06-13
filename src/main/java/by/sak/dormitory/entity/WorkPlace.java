@@ -20,7 +20,7 @@ public class WorkPlace implements BaseEntity<Integer>{
     private Integer id;
     private String name;
     private String address;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "user_id")
+//    private User user;
 }

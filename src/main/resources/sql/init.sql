@@ -17,6 +17,13 @@ CREATE TABLE IF NOT EXISTS manager
 
 );
 
+CREATE TABLE IF NOT EXISTS work
+(
+    id      SERIAL PRIMARY KEY,
+    name    VARCHAR(64)  NOT NULL UNIQUE,
+    address VARCHAR(256) NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS dormitory
 (
     id           SERIAL PRIMARY KEY,
@@ -71,6 +78,7 @@ CREATE TABLE IF NOT EXISTS users
     password              VARCHAR(512),
     personal_info_id      INT REFERENCES personal_info (id),
     room_id               INT REFERENCES room (id),
+    workplace_id          INT REFERENCES work (id),
     job_title             VARCHAR(128),
     notes                 VARCHAR(512),
     is_tenant             BOOLEAN NOT NULL,
@@ -78,14 +86,6 @@ CREATE TABLE IF NOT EXISTS users
     date_registration_end DATE,
     date_revise           DATE,
     status_employee       VARCHAR NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS work
-(
-    id      SERIAL PRIMARY KEY,
-    name    VARCHAR(64)  NOT NULL UNIQUE,
-    address VARCHAR(256) NOT NULL,
-    user_id INT REFERENCES users (id)
 );
 
 CREATE TABLE IF NOT EXISTS contract

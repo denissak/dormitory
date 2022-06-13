@@ -8,6 +8,7 @@ import by.sak.dormitory.repository.DormitoryRepository;
 import by.sak.dormitory.service.DormitoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -36,6 +37,7 @@ public class DormitoryServiceImpl implements DormitoryService {
         return dormitoryRepository.findById(dormitoryId).map(dormitoryReadMapper::convertToDormitoryReadDto);
     }
 
+    @Transactional
     @Override
     public DormitoryReadDto create(DormitoryCreateUpdateDto dormitory) {
         return Optional.of(dormitory)
@@ -45,6 +47,7 @@ public class DormitoryServiceImpl implements DormitoryService {
                 .orElseThrow();
     }
 
+    @Transactional
     @Override
     public Optional<DormitoryReadDto> update(Integer id, DormitoryCreateUpdateDto dormitory) {
         return dormitoryRepository.findById(id).map(entity -> dormitoryCreateUpdateMapper.map(dormitory, entity))
@@ -52,6 +55,7 @@ public class DormitoryServiceImpl implements DormitoryService {
                 .map(dormitoryReadMapper::convertToDormitoryReadDto);
     }
 
+    @Transactional
     @Override
     public boolean delete(Integer id) {
         return dormitoryRepository.findById(id).map(dormitory -> {

@@ -1,21 +1,18 @@
 package by.sak.dormitory.dto;
 
 import by.sak.dormitory.entity.StatusEmployee;
-import lombok.ToString;
+
 import lombok.Value;
 
 import java.time.LocalDate;
 
 @Value
-@ToString(exclude =  {"personalInfoReadDto","roomReadDto", "workReadDto"})
-public class UserReadDto {
-
-    Integer id;
+public class UserCreateUpdateDto {
     String login;
     String password;
-    PersonalInfoReadDto personalInfoReadDto;
-    RoomReadDto roomReadDto;
-    WorkReadDto workReadDto;
+    Integer personalInfoId;
+    Integer roomId;
+    Integer workId;
     String jobTitle;
     String notes;
     Boolean isTenant;
@@ -23,5 +20,4 @@ public class UserReadDto {
     LocalDate dateRegistrationEnd;
     LocalDate dateRevise;
     StatusEmployee statusEmployee;
-
 }

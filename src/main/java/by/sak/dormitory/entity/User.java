@@ -9,8 +9,8 @@ import java.util.List;
 
 @Entity
 @Data
-@ToString(exclude = {"workPlaces", "contracts"})
-@EqualsAndHashCode(exclude = {"workPlaces", "contracts"})
+@ToString(exclude = "contracts")
+@EqualsAndHashCode(exclude = "contracts")
 @Table(name = "users")
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,10 +28,9 @@ public class User implements BaseEntity<Integer>{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
     private Room room;
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    private List<Contract> contracts = new ArrayList<>();
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    private List<WorkPlace> workPlaces = new ArrayList<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "workplace_id")
+    private WorkPlace workPlace;
     private String jobTitle;
     private String notes;
     private Boolean isTenant;

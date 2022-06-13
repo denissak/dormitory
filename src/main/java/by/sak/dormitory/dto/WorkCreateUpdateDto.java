@@ -3,8 +3,7 @@ package by.sak.dormitory.dto;
 import lombok.Value;
 
 @Value
-public class WorkReadDto {
-    Integer id;
+public class WorkCreateUpdateDto {
     String name;
     String address;
 }

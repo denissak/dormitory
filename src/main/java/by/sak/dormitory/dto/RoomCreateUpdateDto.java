@@ -5,9 +5,7 @@ import lombok.ToString;
 import lombok.Value;
 
 @Value
-@ToString(exclude =  "dormitoryReadDto")
-public class RoomReadDto {
-    Integer id;
+public class RoomCreateUpdateDto {
     String number;
     TypeRoom type;
     Integer square;
@@ -15,5 +13,5 @@ public class RoomReadDto {
     Integer floor;
     String image;
     Integer amount;
-    DormitoryReadDto dormitoryReadDto;
+    Integer dormitoryId;
 }

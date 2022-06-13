@@ -3,13 +3,11 @@ package by.sak.dormitory.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Data
-@ToString(exclude = {"users", "dormitory"})
-@EqualsAndHashCode(exclude = {"users", "dormitory"})
+@ToString(exclude = "dormitory")
+@EqualsAndHashCode(exclude = "dormitory")
 @Table(name = "room")
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,6 +28,6 @@ public class Room implements BaseEntity<Integer>{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "dormitory_id")
     private Dormitory dormitory;
-    @OneToMany(mappedBy = "room", fetch = FetchType.LAZY)
-    private List<User> users = new ArrayList<>();
+//    @OneToMany(mappedBy = "room", fetch = FetchType.LAZY)
+//    private List<User> users = new ArrayList<>();
 }

@@ -14,9 +14,9 @@ public interface RoomReadMapper {
 
     RoomReadMapper INSTANCE = Mappers.getMapper(RoomReadMapper.class);
 
-//    @Mapping(source = "dormitory", target = "dormitoryReadDto")
+    @Mapping(source = "dormitory", target = "dormitoryReadDto")
     RoomReadDto convertToRoomReadDto(Room room);
 
-//    @Mapping(source = "dormitoryReadDto", target = "dormitory")
+    @Mapping(source = "dormitoryReadDto", target = "dormitory")
     Room convertToRoom(RoomReadDto roomReadDto);
 }
