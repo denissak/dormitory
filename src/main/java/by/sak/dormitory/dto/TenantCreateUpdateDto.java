@@ -7,9 +7,7 @@ import lombok.Value;
 import java.time.LocalDate;
 
 @Value
-public class UserCreateUpdateDto {
-    String login;
-    String password;
+public class TenantCreateUpdateDto {
     Integer personalInfoId;
     Integer roomId;
     Integer workId;

@@ -9,14 +9,14 @@ import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Component;
 
 @Component
-@Mapper(componentModel = "spring", uses = UserReadMapper.class, injectionStrategy = InjectionStrategy.CONSTRUCTOR)
+@Mapper(componentModel = "spring", uses = TenantReadMapper.class, injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface ContractReadMapper {
 
     ContractReadMapper INSTANCE = Mappers.getMapper(ContractReadMapper.class);
 
-    @Mapping(source = "user", target = "userReadDto")
+    @Mapping(source = "tenant", target = "tenantReadDto")
     ContractReadDto convertToContractReadDto(Contract contract);
 
-    @Mapping(source = "userReadDto", target = "user")
+    @Mapping(source = "tenantReadDto", target = "tenant")
     Contract convertToContract(ContractReadDto contractReadDto);
 }

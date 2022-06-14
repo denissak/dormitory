@@ -2,8 +2,8 @@ package by.sak.dormitory.mapper;
 
 import by.sak.dormitory.dto.ContractCreateUpdateDto;
 import by.sak.dormitory.entity.Contract;
-import by.sak.dormitory.entity.User;
-import by.sak.dormitory.repository.UserRepository;
+import by.sak.dormitory.entity.Tenant;
+import by.sak.dormitory.repository.TenantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,11 +12,11 @@ import java.util.Optional;
 @Component
 public class ContractCreateUpdateMapper implements Mapper<ContractCreateUpdateDto, Contract>{
 
-    private final UserRepository userRepository;
+    private final TenantRepository tenantRepository;
 
     @Autowired
-    public ContractCreateUpdateMapper(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public ContractCreateUpdateMapper(TenantRepository tenantRepository) {
+        this.tenantRepository = tenantRepository;
     }
 
     @Override
@@ -42,12 +42,12 @@ public class ContractCreateUpdateMapper implements Mapper<ContractCreateUpdateDt
         contract.setContractRegistration(object.getContractRegistration());
         contract.setNumberRegistration(object.getNumberRegistration());
         contract.setContractPetition(object.getContractPetition());
-        contract.setUser(getUser(object.getUserId()));
+        contract.setTenant(getUser(object.getTenantId()));
     }
 
-    public User getUser(Integer userId) {
+    public Tenant getUser(Integer userId) {
         return Optional.ofNullable(userId)
-                .flatMap(userRepository::findById)
+                .flatMap(tenantRepository::findById)
                 .orElse(null);
     }
 

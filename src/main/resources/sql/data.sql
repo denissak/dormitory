@@ -39,6 +39,9 @@ INSERT INTO work(name, address) VALUES
 ('GOOGLE', 'Какая-то улица'),
 ('филиал Ада', 'Какая-то улица');
 
+INSERT INTO users(login, password, role) VALUES
+('ADMIN', '123','ADMIN');
+
 INSERT INTO room(number, type, square, square_live, floor, image, amount, dormitory_id) VALUES
 ('12','ASD',32.1,20.8,1,'adsasd',2,1),
 ('28A','BLOCKED',60.1,53.8,2,'adsasd',2,2),
@@ -54,16 +57,16 @@ INSERT INTO room(number, type, square, square_live, floor, image, amount, dormit
 ('26','ASD',19.1,15,2,'adsasd',2,1),
 ('13','ASD',14.1,9,1,'adsasd',1,1);
 
-INSERT INTO users(login, password, personal_info_id, room_id, workplace_id, job_title, notes, is_tenant, date_registration, date_registration_end, date_revise, status_employee) VALUES
-('','',1,1,1,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','STANDARD'),
-('','',2,2,2,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','OTHER'),
-('','',3,3,3,'Инженер','курил в туалете','true','2022-01-15', '2023-01-15', '2022-03-15','STANDARD'),
-('','',4,4,4,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','STANDARD'),
-('','',5,5,5,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','OTHER'),
-('','',6,6,6,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','OTHER'),
-('','',7,7,7,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','STANDARD');
+INSERT INTO tenant(personal_info_id, room_id, workplace_id, job_title, notes, is_tenant, date_registration, date_registration_end, date_revise, status_employee) VALUES
+(1,1,1,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','STANDARD'),
+(2,2,2,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','OTHER'),
+(3,3,3,'Инженер','курил в туалете','true','2022-01-15', '2023-01-15', '2022-03-15','STANDARD'),
+(4,4,4,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','STANDARD'),
+(5,5,5,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','OTHER'),
+(6,6,6,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','OTHER'),
+(7,7,7,'Инженер','','true','2022-01-15', '2023-01-15', '2022-03-15','STANDARD');
 
-INSERT INTO contract(contract_number, contract_start, type, contract_end, contract_registration, number_registration, contract_petition, user_id) VALUES
+INSERT INTO contract(contract_number, contract_start, type, contract_end, contract_registration, number_registration, contract_petition, tenant_id) VALUES
 ('141/2','2022-04-15','STANDARD','2023-04-14','2022-04-18', '15', null, 1),
 ('141/2','2022-04-15','OTHER','2023-04-14','2022-04-18', '15', '2022-03-20', 1),
 ('141/2','2022-04-15','STANDARD','2023-04-14','2022-04-18', '15', null, 1),

@@ -7,7 +7,7 @@ import lombok.Value;
 import java.time.LocalDate;
 
 @Value
-@ToString(exclude =  "userReadDto")
+@ToString(exclude =  "tenantReadDto")
 public class ContractReadDto {
     Integer id;
     String contractNumber;
@@ -17,5 +17,5 @@ public class ContractReadDto {
     LocalDate contractRegistration;
     String numberRegistration;
     LocalDate contractPetition;
-    UserReadDto userReadDto;
+    TenantReadDto tenantReadDto;
 }

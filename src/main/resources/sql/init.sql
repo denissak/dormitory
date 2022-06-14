@@ -1,11 +1,20 @@
 DROP TABLE manager;
-DROP TABLE contract;
-DROP TABLE work;
 DROP TABLE users;
+DROP TABLE contract;
+DROP TABLE tenant;
+DROP TABLE work;
 DROP TABLE personal_info;
 DROP TABLE room;
 DROP TABLE dormitory;
 
+
+CREATE TABLE IF NOT EXISTS users
+(
+    id       SERIAL PRIMARY KEY,
+    login    VARCHAR(64),
+    password VARCHAR(512),
+    role     VARCHAR(64)
+);
 
 CREATE TABLE IF NOT EXISTS manager
 (
@@ -71,11 +80,9 @@ CREATE TABLE IF NOT EXISTS personal_info
     stroller           INT
 );
 
-CREATE TABLE IF NOT EXISTS users
+CREATE TABLE IF NOT EXISTS tenant
 (
     id                    SERIAL PRIMARY KEY,
-    login                 VARCHAR(64),
-    password              VARCHAR(512),
     personal_info_id      INT REFERENCES personal_info (id),
     room_id               INT REFERENCES room (id),
     workplace_id          INT REFERENCES work (id),
@@ -98,5 +105,5 @@ CREATE TABLE IF NOT EXISTS contract
     contract_registration DATE,
     number_registration   VARCHAR(64),
     contract_petition     DATE,
-    user_id               INT REFERENCES users (id)
+    tenant_id             INT REFERENCES tenant (id)
 );

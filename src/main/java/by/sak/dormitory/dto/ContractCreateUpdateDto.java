@@ -14,5 +14,5 @@ public class ContractCreateUpdateDto {
     LocalDate contractRegistration;
     String numberRegistration;
     LocalDate contractPetition;
-    Integer userId;
+    Integer tenantId;
 }

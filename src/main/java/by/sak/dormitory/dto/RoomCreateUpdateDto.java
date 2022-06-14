@@ -1,7 +1,6 @@
 package by.sak.dormitory.dto;
 
 import by.sak.dormitory.entity.TypeRoom;
-import lombok.ToString;
 import lombok.Value;
 
 @Value

@@ -29,7 +29,7 @@ public class ContractRestController {
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Optional<ContractReadDto> findRoomById(@PathVariable int id) {
+    public Optional<ContractReadDto> findContractById(@PathVariable int id) {
         return contractService.findById(id);
     }
 

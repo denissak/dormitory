@@ -27,6 +27,6 @@ public class Contract implements BaseEntity<Integer>{
     private String numberRegistration;
     private LocalDate contractPetition;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "tenant_id")
+    private Tenant tenant;
 }
