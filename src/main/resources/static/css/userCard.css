@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body {
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+ion-icon {
+    font-size: 2em;
+}
+
+:root {
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+
+.tenant-container {
+    background: var(--white);
+    width: 1740px;
+    height: 750px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 5%;
+    box-shadow: 2px 5px 20px rgba(119,119,119,.5);
+}
+
+.tenant-leftbox {
+    float: left;
+    top: -5%;
+    left: 5%;
+    position: absolute;
+    width: 10%;
+    height: 110%;
+    background: var(--blue);
+    box-shadow: 3px 3px 10px rgba(119,119,119,.5);
+    border: .1em solid var(--white);
+}
+
+nav a {
+    list-style: none;
+    padding: 35px;
+    color: var(--white);
+    font-size: 1.1em;
+    display: block;
+    transition: all .3s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--black1);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+nav a {
+    margin-left: 20%;
+}
+
+nav a:first-child {
+    margin-top: 30px;
+}
+
+nav a.active {
+    color: var(--black1);
+}
+
+.tenant-rightbox {
+    width: 50%;
+    margin-left: 30%;
+    padding-top: 5px;
+}
+
+.tabShow {
+    transition: all .5s ease-in;
+    width: 80%;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--blue);
+    font-size: 2.2rem;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: var(--black2);
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
+
+.tenant-input, p {
+    border: 0;
+    border-bottom: 1px solid var(--black2);
+    width: 150%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1em;
+    padding: 5px 0;
+    outline: none;
+}
+
+.tenant-input:hover, p {
+    border-bottom: 2px solid var(--blue);
+}
+
+span {
+    font-size: .7em;
+    color: var(--black2);
+}
+
+.tenant-button {
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: 0;
+    color: var(--white);
+    background: var(--blue);
+    padding: 22px 30px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.tabShow {
+    display: none;
+}
+

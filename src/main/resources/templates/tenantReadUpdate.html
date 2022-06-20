@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tenant profile</title>
+    <link rel="stylesheet" href="../static/css/userCard.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="tenant-container">
+    <div class="tenant-leftbox">
+        <nav>
+            <a onclick="tabs(0)" class="tenant-tab active">
+                <i class="ten-size"><ion-icon name="accessibility-outline"></ion-icon></i>
+            </a>
+            <a onclick="tabs(1)" class="tenant-tab">
+                <i><ion-icon name="people-outline"></ion-icon></i>
+            </a>
+            <a onclick="tabs(2)" class="tenant-tab">
+                <i><ion-icon name="documents-outline"></ion-icon></i>
+            </a>
+            <a onclick="tabs(3)" class="tenant-tab">
+                <i><ion-icon name="hammer-outline"></ion-icon></i>
+            </a>
+            <a onclick="tabs(4)" class="tenant-tab">
+                <i><ion-icon name="home-outline"></ion-icon></i>
+            </a>
+            <a onclick="tabs(5)" class="tenant-tab">
+                <i><ion-icon name="newspaper-outline"></ion-icon></i>
+            </a>
+        </nav>
+    </div>
+    <div class="tenant-rightbox">
+        <div class="personal tabShow">
+            <h1>Персональная информация</h1>
+            <h2>Имя</h2>
+            <input type="text" class="tenant-input" value="Иван">
+
+            <h2>Фамилия</h2>
+            <input type="text" class="tenant-input" value="Иванов">
+
+            <h2>Отчество</h2>
+            <input type="text" class="tenant-input" value="Иванович">
+
+            <h2>Телефон</h2>
+            <input type="text" class="tenant-input" value="+375293655254">
+
+            <h2>Пол</h2>
+            <input type="text" class="tenant-input" value="Male">
+
+            <h2>Дата рождения</h2>
+            <input type="text" class="tenant-input" value="01-12-2000">
+
+            <br>
+            <button class="tenant-button">Изменить</button>
+
+        </div>
+
+        <div class="family tabShow">
+            <h1>Семья</h1>
+            <h2>Гражданский статус</h2>
+            <input type="text" class="tenant-input" value="MARRIED">
+
+            <h2>Муж/Жена</h2>
+            <input type="text" class="tenant-input" value="Иванова Иванна Ивановна">
+
+            <h2>Дети</h2>
+            <input type="text" class="tenant-input" value="Иванова Иванна Ивановна, Иванов Иванчик Иванович">
+
+            <h2>Питомцы</h2>
+            <input type="text" class="tenant-input" value="Крокодил">
+
+            <h2>Велосипед</h2>
+            <input type="text" class="tenant-input" value="2">
+
+            <h2>Коляска</h2>
+            <input type="text" class="tenant-input" value="1">
+
+            <br>
+            <button class="tenant-button">Изменить</button>
+
+        </div>
+
+        <div class="document tabShow">
+            <h1>Документы</h1>
+            <h2>Номер пасспорта</h2>
+            <input type="text" class="tenant-input" value="MP1111111">
+
+            <h2>Идентификационный номер</h2>
+            <input type="text" class="tenant-input" value="3091425КВ44564564646028РВ7">
+
+            <h2>Кем выдан</h2>
+            <input type="text" class="tenant-input" value="Советским РУВД г.Минска 05.20.2030">
+
+            <br>
+            <button class="tenant-button">Изменить</button>
+
+        </div>
+
+        <div class="work tabShow">
+            <h1>Работа</h1>
+            <h2>Тип жильца</h2>
+            <input type="text" class="tenant-input" value="STANDARD">
+
+            <h2>Место работы</h2>
+            <input type="text" class="tenant-input" value="филиал Трамвайный парк">
+
+            <h2>Адрес места работы</h2>
+            <input type="text" class="tenant-input" value="Ботаническая, 4">
+
+            <h2>Должность</h2>
+            <input type="text" class="tenant-input" value="Заместитель заместителя по заместительским вопросам">
+
+            <h2>Стаж</h2>
+            <input type="text" class="tenant-input" value="1">
+
+            <br>
+            <button class="tenant-button">Изменить</button>
+
+        </div>
+
+        <div class="housing-info tabShow">
+            <h1>Жилье</h1>
+            <h2>Наименование общежития</h2>
+            <input type="text" class="tenant-input" value="Общежитие #1">
+
+            <h2>Адрес</h2>
+            <input type="text" class="tenant-input" value="Ботаническая 99">
+
+            <h2>Номер комнаты</h2>
+            <input type="text" class="tenant-input" value="1408">
+
+            <h2>Тип комнаты</h2>
+            <input type="text" class="tenant-input" value="BLOCKED">
+
+            <h2>Площадь</h2>
+            <input type="text" class="tenant-input" value="22">
+
+            <h2>Жилая площадь</h2>
+            <input type="text" class="tenant-input" value="15">
+
+            <h2>Этаж</h2>
+            <input type="text" class="tenant-input" value="25">
+
+            <br>
+            <button class="tenant-button">Изменить</button>
+
+        </div>
+
+        <div class="documents tabShow">
+            <h1>Договора</h1>
+            <h2>Тип договора</h2>
+            <input type="text" class="tenant-input" value="STANDARD">
+
+            <h2>Номер договора</h2>
+            <input type="text" class="tenant-input" value="99">
+
+            <h2>Дата заключения</h2>
+            <input type="text" class="tenant-input" value="01-12-2021">
+
+            <h2>Дата окончания</h2>
+            <input type="text" class="tenant-input" value="01-12-2022">
+
+            <h2>Дата регистрации</h2>
+            <input type="text" class="tenant-input" value="01-01-2022">
+
+            <h2>Номер регистрации</h2>
+            <input type="text" class="tenant-input" value="15">
+
+            <h2>Дата ходатайства</h2>
+            <input type="text" class="tenant-input" value="01-12-2022">
+
+            <br>
+            <button class="tenant-button">Изменить</button>
+
+        </div>
+
+
+
+    </div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script src="jquery/jquery.js"></script>
+<script>
+    const tabBtn = document.querySelectorAll(".tenant-tab");
+    const tab = document.querySelectorAll(".tabShow");
+
+    function tabs(panelIndex){
+        tab.forEach(function (node) {
+            node.style.display = "none";
+        });
+        tab[panelIndex].style.display = "block";
+    }
+    tabs(0);
+</script>
+<script>
+    $(".tenant-tab").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    })
+</script>
+</body>
+</html>
