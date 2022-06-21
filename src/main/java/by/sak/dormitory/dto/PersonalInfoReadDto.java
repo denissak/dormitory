@@ -21,8 +21,6 @@ public class PersonalInfoReadDto {
     String passportIssuedBy;
     String registration;
     StatusCitizen status;
-    String partner;
-    String children;
     String pets;
     Integer bike;
     Integer stroller;

@@ -1,6 +1,7 @@
 DROP TABLE manager;
 DROP TABLE users;
 DROP TABLE contract;
+DROP TABLE relation;
 DROP TABLE tenant;
 DROP TABLE work;
 DROP TABLE personal_info;
@@ -73,8 +74,6 @@ CREATE TABLE IF NOT EXISTS personal_info
     passport_issued_by VARCHAR(256) NOT NULL,
     registration       VARCHAR(256) NOT NULL,
     status             VARCHAR(64)  NOT NULL,
-    partner            VARCHAR(256),
-    children           VARCHAR(512),
     pets               VARCHAR(512),
     bike               INT,
     stroller           INT
@@ -93,6 +92,14 @@ CREATE TABLE IF NOT EXISTS tenant
     date_registration_end DATE,
     date_revise           DATE,
     status_employee       VARCHAR NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS relation
+(
+    id              SERIAL PRIMARY KEY,
+    current_tenant_id INT REFERENCES tenant (id),
+    family_tenant_id  INT REFERENCES tenant (id),
+    family_status   VARCHAR(64)
 );
 
 CREATE TABLE IF NOT EXISTS contract

@@ -35,8 +35,8 @@ public class PersonalInfoCreateUpdateMapper implements Mapper<PersonalInfoCreate
         personalInfo.setPassportIssuedBy(object.getPassportIssuedBy());
         personalInfo.setRegistration(object.getRegistration());
         personalInfo.setStatus(object.getStatus());
-        personalInfo.setPartner(object.getPartner());
-        personalInfo.setChildren(object.getChildren());
+//        personalInfo.setPartner(object.getPartner());
+//        personalInfo.setChildren(object.getChildren());
         personalInfo.setPets(object.getPets());
         personalInfo.setBike(object.getBike());
         personalInfo.setStroller(object.getStroller());

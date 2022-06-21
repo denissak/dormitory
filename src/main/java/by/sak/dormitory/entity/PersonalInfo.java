@@ -35,8 +35,8 @@ public class PersonalInfo implements BaseEntity<Integer>{
     private String registration;
     @Enumerated(EnumType.STRING)
     private StatusCitizen status;
-    private String partner;
-    private String children;
+//    private String partner;
+//    private String children;
     private String pets;
     private Integer bike;
     private Integer stroller;
